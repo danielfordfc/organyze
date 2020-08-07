@@ -1,7 +1,8 @@
 <!DOCTYPE html>
+{%load static%}
 <html>
 <body>
-<h2>Italian Trulli</h2>
-{{insert_me}}
+<h2>This home page calls static %static 'hello_world/fish1.jpg' % inside img tag src</h2>
+<img src="{%static 'hello_world/fish1.jpg' %}" alt="Uh Oh, didn't show!">
 </body>
 </html>

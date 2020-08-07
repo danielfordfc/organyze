@@ -19,3 +19,5 @@ Eventual functionality / development practises aiming to be worked on:
 	-Implementation of some kind of rudimentary CI/CD pipeline to be run as a pull request check
 
 	-Pair programming to be organised using a Github Project Kanban board.
+	
+	A UML Diagram is to be drawn to form part of the systems design.

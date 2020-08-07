@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 {%load static%}
 <html>
+<head>
+    <meta charset="utf-8">
+    <title> My Front Page with injected CSS </title>
+    <link rel="stylesheet" href="{%static 'hello_world/css/mystyles.css' %}"/>
+</head>
 <body>
-<h2>This home page calls static %static 'hello_world/fish1.jpg' % inside img tag src</h2>
-<img src="{%static 'hello_world/fish1.jpg' %}" alt="Uh Oh, didn't show!">
+<h2>This home page calls static %static 'hello_world/fish1.jpg' % inside img tag src, css for h2 injected through
+    Django</h2>
+<img src="{%static 'hello_world/images/fish2.jpg' %}" alt="Uh Oh, didn't show!">
+<img src="{%static 'hello_world/images/fish4.jpg' %}" alt="Uh Oh, didn't show!">
 </body>
 </html>

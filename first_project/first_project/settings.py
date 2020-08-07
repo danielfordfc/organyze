@@ -123,13 +123,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 
-
+"""
+STATIC_URL defines the url at which our static content can be DIRECTLY accessed from the Django Domain.
+Protections to defend against the acquisition of static content can be set up.
+"""
 STATIC_URL = '/static/'
+
 
 '''
 Need to create static files dir to segregate app static files
 '''
-
 STATICFILES_DIRS = [
     STATIC_DIR,
 

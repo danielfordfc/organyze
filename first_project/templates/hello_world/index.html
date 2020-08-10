@@ -3,12 +3,33 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title> My Front Page with injected CSS </title>
-    <link rel="stylesheet" href="{%static 'hello_world/css/mystyles.css' %}"/>
+    <title> My Front Page with injected CSS and DB Query </title>
+    <link rel="stylesheet" href="{%static 'hello_world/css/mystyles2.css' %}"/>
 </head>
 <body>
 <h2>This home page calls static %static 'hello_world/fish1.jpg' % inside img tag src, css for h2 injected through
     Django</h2>
+
+<div class="djangotwo">
+    {%if access_records%}
+    <table>
+        <thead>
+        <th bgcolor="red">Site Name</th>
+        <th>Date Accessed</th>
+        </thead>
+
+        {%for acc in access_records%}
+        <tr>
+            <td>{{acc.name}}</td>
+            <td>{{acc.date}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {%else%}
+        <p>NO ACCESS RECORDS FOUND</p>
+    {%endif%}
+</div>
+
 <img src="{%static 'hello_world/images/fish2.jpg' %}" alt="Uh Oh, didn't show!">
 <img src="{%static 'hello_world/images/fish4.jpg' %}" alt="Uh Oh, didn't show!">
 </body>

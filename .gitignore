@@ -2,3 +2,8 @@
 *.pyc
 *.idea
 .idea
+first_project/first_project/__pycache__/settings.cpython-37.pyc
+first_project/hello_world/__pycache__/admin.cpython-37.pyc
+first_project/hello_world/__pycache__/models.cpython-37.pyc
+first_project/hello_world/__pycache__/urls.cpython-37.pyc
+first_project/hello_world/__pycache__/views.cpython-37.pyc

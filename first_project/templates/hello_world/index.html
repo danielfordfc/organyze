@@ -4,11 +4,16 @@
 <head>
     <meta charset="utf-8">
     <title> My Front Page with injected CSS and DB Query </title>
-    <link rel="stylesheet" href="{%static 'hello_world/css/mystyles2.css' %}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
+<div class="container">
+    <div class="jumbotron">
+
 <h2>This home page calls static %static 'hello_world/fish1.jpg' % inside img tag src, css for h2 injected through
-    Django</h2>
+    Django - I'm currently in a Bootstrap Jumbotron div</h2>
+    </div>
+</div>
 
 <div class="djangotwo">
     {%if access_records%}

@@ -1,10 +1,26 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from . import forms
+
 
 from hello_world.models import Topic, Webpage, AccessRecords, User, Task
 
 
 # Create your views here.
+
+def form_name_view(request):
+
+    form = forms.FormName()
+    if request.method == 'POST':
+        form = forms.FormName(request.POST)
+
+        if form.is_valid():
+            print("Validation Success")
+            print('Name: ' + str(form.cleaned_data['name']))
+            print('Task: ' + str(form.cleaned_data['task']))
+            print('start_date: ' + str(form.cleaned_data['start_date']))
+
+    return render(request,'hello_world/form_page.html',context={'form':form})
 
 
 def base(request):
@@ -54,6 +70,6 @@ def users(request):
 
     """
 
-    user_list = Task.objects.order_by('start_date')
+    user_list = Task.objects.order_by('username')
     user_dict = {'user_dict': user_list}
     return render(request, 'hello_world/sidebar2_django.html', context=user_dict)

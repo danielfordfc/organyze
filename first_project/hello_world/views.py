@@ -1,12 +1,33 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from . import forms
+from hello_world.forms import ModelFormTest, ModelFormUser
+
 
 
 from hello_world.models import Topic, Webpage, AccessRecords, User, Task
 
 
 # Create your views here.
+
+def modelform_test(request):
+    f = ModelFormTest()
+    if request.method == 'POST':
+        f = ModelFormTest(request.POST)
+        new_article = f.save()
+
+    return render(request, 'hello_world/form_page2.html', context={'form': f})
+
+def modelform_user(request):
+    f = ModelFormUser()
+    if request.method == 'POST':
+        f = ModelFormUser(request.POST)
+        f.save()
+
+    return render(request, 'hello_world/form_page3.html', context={'form': f})
+
+
+
 
 def form_name_view(request):
 

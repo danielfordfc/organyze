@@ -44,7 +44,15 @@ class FormName(forms.Form):
 
 # https://docs.djangoproject.com/en/3.0/topics/forms/modelforms/
 
-#class ModelFormTest(forms.ModelForm):
+class ModelFormTest(forms.ModelForm):
+    class Meta:
+        model = Task
+        fields = ['username','task','start_date']
 
-    #pass
+
+class ModelFormUser(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ['username']
+
 
